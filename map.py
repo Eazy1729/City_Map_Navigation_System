@@ -13,7 +13,7 @@ def create_map(shortest_path=None, path_distance=None):
     - Shortest path as a red line (optional)
     """
     # Center the map approximately
-    m = folium.Map(location=[30.5, 71.5], zoom_start=5)
+    m = folium.Map(location=[30, 70], zoom_start=5)
 
     # Add city markers
     for city, coord in cities.items():
@@ -30,3 +30,4 @@ def create_map(shortest_path=None, path_distance=None):
         folium.PolyLine(path_coords, color="red", weight=5, tooltip=f"{path_distance} km").add_to(m)
 
     return m
+
